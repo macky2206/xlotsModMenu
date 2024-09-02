@@ -302,7 +302,7 @@ int RegisterMenu(JNIEnv *env) {
             {OBFUSCATE("GetFeatureList"),  OBFUSCATE("()[Ljava/lang/String;"), reinterpret_cast<void *>(GetFeatureList)},
     };
 
-    jclass clazz = env->FindClass(OBFUSCATE("com/android/support/Menu"));
+    jclass clazz = env->FindClass(OBFUSCATE("com/xlots/support/Menu"));
     if (!clazz)
         return JNI_ERR;
     if (env->RegisterNatives(clazz, methods, sizeof(methods) / sizeof(methods[0])) != 0)
@@ -314,7 +314,7 @@ int RegisterPreferences(JNIEnv *env) {
     JNINativeMethod methods[] = {
             {OBFUSCATE("Changes"), OBFUSCATE("(Landroid/content/Context;ILjava/lang/String;IZLjava/lang/String;)V"), reinterpret_cast<void *>(Changes)},
     };
-    jclass clazz = env->FindClass(OBFUSCATE("com/android/support/Preferences"));
+    jclass clazz = env->FindClass(OBFUSCATE("com/xlots/support/Preferences"));
     if (!clazz)
         return JNI_ERR;
     if (env->RegisterNatives(clazz, methods, sizeof(methods) / sizeof(methods[0])) != 0)
@@ -326,7 +326,7 @@ int RegisterMain(JNIEnv *env) {
     JNINativeMethod methods[] = {
             {OBFUSCATE("CheckOverlayPermission"), OBFUSCATE("(Landroid/content/Context;)V"), reinterpret_cast<void *>(CheckOverlayPermission)},
     };
-    jclass clazz = env->FindClass(OBFUSCATE("com/android/support/Main"));
+    jclass clazz = env->FindClass(OBFUSCATE("com/xlots/support/Main"));
     if (!clazz)
         return JNI_ERR;
     if (env->RegisterNatives(clazz, methods, sizeof(methods) / sizeof(methods[0])) != 0)
