@@ -14,6 +14,16 @@
 #include "Includes/Utils.h"
 #include "KittyMemory/MemoryPatch.h"
 #include "Menu/Setup.h"
+// ByNameModding
+#include <BNM/UserSettings/GlobalSettings.hpp>
+
+#include <BNM/Class.hpp>
+#include <BNM/Field.hpp>
+#include <BNM/Method.hpp>
+#include <BNM/Property.hpp>
+#include <BNM/Defaults.hpp>
+#include <BNM/Operators.hpp>
+#include <BNM/BasicMonoStructures.hpp>
 
 //Target lib here
 #define targetLibName OBFUSCATE("libFileA.so")

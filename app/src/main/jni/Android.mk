@@ -18,15 +18,24 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)
 
 # Here you add the cpp file to compile
 LOCAL_SRC_FILES := Main.cpp \
-	Substrate/hde64.c \
-	Substrate/SubstrateDebug.cpp \
-	Substrate/SubstrateHook.cpp \
-	Substrate/SubstratePosixMemory.cpp \
-	Substrate/SymbolFinder.cpp \
-	KittyMemory/KittyMemory.cpp \
-	KittyMemory/MemoryPatch.cpp \
-    KittyMemory/MemoryBackup.cpp \
-    KittyMemory/KittyUtils.cpp \
-	And64InlineHook/And64InlineHook.cpp \
+ Substrate/hde64.c \
+ Substrate/SubstrateDebug.cpp \
+ Substrate/SubstrateHook.cpp \
+ Substrate/SubstratePosixMemory.cpp \
+ Substrate/SymbolFinder.cpp \
+ KittyMemory/KittyMemory.cpp \
+ KittyMemory/MemoryPatch.cpp \
+ KittyMemory/MemoryBackup.cpp \
+ KittyMemory/KittyUtils.cpp \
+ And64InlineHook/And64InlineHook.cpp \
+
+# Add ByNameModding paths and libraries
+BNM_PATH := $(LOCAL_PATH)/ByNameModding
+LOCAL_C_INCLUDES += $(BNM_PATH)/include $(BNM_PATH)/external/include
+LOCAL_STATIC_LIBRARIES += BNM
 
 include $(BUILD_SHARED_LIBRARY)
+
+# Include ByNameModding Android.mk
+include $(CLEAR_VARS)
+include $(BNM_PATH)/Android.mk

@@ -30,6 +30,7 @@ android {
             path file('src/main/jni/Android.mk')
         }
     }
+    ndkVersion '22.0.7026061'
 }
 
 //dependencies must be placed below 'android' brackets to get it work on AIDE
