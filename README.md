@@ -1,6 +1,6 @@
 MainActivity
 ```
-invoke-static {p0}, Lcom/android/support/Main;->Start(Landroid/content/Context;)V
+invoke-static {p0}, Lcom/xlots/support/Main;->Start(Landroid/content/Context;)V
 ```
 AndroidManifest.xml
 1
